@@ -1,14 +1,117 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-  <title>RubyWorld</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Ruby-World</title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class='wrap'>
 
-<%= yield %>
+      <div class='home'>
+        <div class='header--full-wrap'>
+  <div class='header--full'>
+    <a class='logo' href='http://ruby-world.com' alt="Ruby - A Programmer's Best Friend">Ruby World</a>
+    <div class='club-sandwich'></div>
+    <header>
+      <nav class='header__nav'>
+        <a class='header__nav__link l-header__nav__link' href='http://blog.ruby-world.com'>Blog</a>
+        <a class='header__nav__link l-header__nav__link' href='http://redmine.ruby-world.com/'>Redmine</a>
+        <a class='header__nav__link l-header__nav__link' href='http://git.ruby-world.com/'>Git</a>
+        <a class='header__nav__link l-header__nav__link' href='http://ruby-lang.org/en/downloads'>Downloads</a>
+        <a class='header__nav__link l-header__nav__link' href='/about'>About</a>
+      </nav>
+    </header>
+  </div>
+</div>
 
-</body>
+    <div class="main">
+    	<%= yield %>
+    </div>
+</div>
+
+      <footer>
+        <div class='footer__navs l-wrap'>
+  <nav class='footer__nav'>
+    <h2 class='footer__nav__header'>Community</h2>
+    <a class='footer__nav__link' href='http://ruby-lang.org/en/libraries'>Libraries</a>
+    <a class='footer__nav__link' href='http://ruby-lang.org/en/community/user-groups'>Ruby User Groups</a>
+    <a class='footer__nav__link' href='http://ruby-lang.org/en/community/mailing-lists'>Ruby Mailing Lists &amp; Newsgroups</a>
+    <a class='footer__nav__link' href='irc://irc.freenode.net/ruby-lang'>Ruby on IRC</a>
+    <a class='footer__nav__link' href='http://ruby-lang.org/en/community/ruby-core'>Ruby Core</a>
+    <a class='footer__nav__link' href='http://ruby-lang.org/en/community/weblogs'>Ruby Blogs</a>
+    <a class='footer__nav__link' href='http://ruby-lang.org/en/community/conferences'>Ruby Conferences</a>
+  </nav>
+  <nav class='footer__nav'>
+    <h2 class='footer__nav__header'>News</h2>
+    
+      <a class='footer__nav__link' href="http://ruby-lang.org/en/news/2013/10/04/rubyconf-au-2014/">RubyConf Australia 2014 Call For Proposals and Tickets Now Open!</a>
+    
+      <a class='footer__nav__link' href="http://ruby-lang.org/en/news/2013/09/28/design-contest/">Design Contest for www.ruby-lang.org</a>
+    
+      <a class='footer__nav__link' href="http://ruby-lang.org/en/news/2013/09/23/ruby-2-1-0-preview1-is-released/">Ruby 2.1.0-preview1 is released</a>
+    
+      <a class='footer__nav__link' href="http://ruby-lang.org/en/news/2013/09/07/we-use-fastly-cdn/">We started distributing source packages via Fastly</a>
+    
+      <a class='footer__nav__link' href="http://ruby-lang.org/en/news/2013/09/03/vietnamese-translation/">Vietnamese translation of ruby-lang.org</a>
+    
+      <a class='footer__nav__link' href="http://ruby-lang.org/en/news/2013/08/29/confoo-cfp/">ConFoo 2014 is looking for Ruby speakers</a>
+    
+  </nav>
+  <nav class='footer__nav'>
+    <h2 class='footer__nav__header'>Security</h2>
+    <a class='footer__nav__link' href='mailto:security@ruby-lang.org'>Report a Vulnerability</a>
+    <a class='footer__nav__link' href='http://ruby-lang.org/en/security'>Known Issues</a>
+  </nav>
+  <nav class='footer__nav'>
+    <h2 class='footer__nav__header'>Contact Us</h2>
+    <a class='footer__nav__link' href='mailto:admin@ruby-world.org'>admin@ruby-world.org</a>
+    <a class='footer__nav__link' href='https://lsong.org/'>Designed by LSONG.ORG.</a>
+    <a class='footer__nav__link--social icon--github' data-icon='★' href='https://github.com/ruby/www.ruby-lang.org'>
+      <span class='is-hidden'>GitHub</span>
+    </a>
+    
+      
+    
+    <a class='footer__nav__link--social icon' data-icon='✎' href='/en/feeds/news.rss'>
+      <span class='is-hidden'>RSS</span>
+    </a>
+  </nav>
+  <nav class='footer__nav--wide'>
+    <h2 class='footer__nav__header'>Ruby-World.com</h2>
+    <div class='footer__nav__links--inline'>
+      &copy;<a class='footer__nav__link--inline' href='http://ruby-china.org'>RubyWorld.com</a> - design by
+      <a class='footer__nav__link--inline' href='https://lsong.org'>LSONG.ORG</a>
+    </div>
+  </nav>
+</div>
+
+
+      </footer>
+    </div>
+
+    <header>
+      <header class='mobile-nav-wrap'>
+  <nav class='mobile-nav'>
+    <a class='header__nav__link--close' href='#'>
+      <span class='is-hidden'>Close</span>
+    </a>
+    <a class='header__nav__link' href='/en/about'>About</a>
+    <a class='header__nav__link' href='/en/documentation'>Documentation</a>
+    <a class='header__nav__link' href='/en/community'>Community</a>
+    <a class='header__nav__link' href='/en/news'>News</a>
+    <a class='header__nav__link' href='/en/downloads'>Downloads</a>
+    <a class='header__nav__link icon' data-icon='★' href='https://github.com/ruby/www.ruby-lang.org'>
+      <span class='is-hidden'>GitHub</span>
+    </a>
+  </nav>
+</header>
+    </header>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
 </html>
